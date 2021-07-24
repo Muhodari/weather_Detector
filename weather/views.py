@@ -9,7 +9,7 @@ def index(request):
     if request.method == 'POST':
         city = request.POST['city']
         res = urllib.request.urlopen(
-            'http://api.openweathermap.org/data/2.5/weather?q=' + city + '&appid= api key here').read()
+            'https://api.openweathermap.org/data/2.5/weather?q=' + city + '&appid=51840fa8ea027a9f063a172d6a7d1258').read()
         json_data = json.loads(res)
         data = {
             "country_code": str(json_data['sys']['country']),
