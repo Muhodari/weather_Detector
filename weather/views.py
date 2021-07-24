@@ -22,6 +22,7 @@ def index(request):
         }
 
     else:
+        city = ''
         data = {}
 
-    return render(request, 'index.html', data)
+    return render(request, 'index.html', {'city': city, 'data': data})
