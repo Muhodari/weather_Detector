@@ -21,13 +21,29 @@
          font-size: medium;
      }
     }
+    
+
+    @media(max-width: 1020px){
+        .form-control,.btn{
+            height: 40px;
+        }
+        .showDataHeader{
+            font-size:large;
+        }
+       }
 
     #showData{
-        
+        margin-top: 15px;
+        background: -webkit-linear-gradient(to right, #9ce4ba, #c4ecad, #a1d86e);
+        background: linear-gradient(to right, #e2db7a, #5fe936, #93e79e);
     }
 
 
-
+#nav{
+        background: -webkit-linear-gradient(to right, #4fc27f, #aee091, #a1d86e);
+        background: linear-gradient(to right, #e7e4b6, #83c76e, #93e79e);   
+        color:white;
+}
 
 
 </style>
@@ -36,7 +52,7 @@
 <body>
 
 
-<nav class="row" style="background:rgb(137, 243, 173);color:white">
+<nav class="row" id="nav">
     <div align="center"> <h1 class=" col-md-6 col-md-offset-3 text-centered">Weather Detector</h1></div>
 </nav>
 
@@ -60,32 +76,18 @@
 </form>
 </center>
 
-<!-- <div class="row">
-<div class="card-body col-md-6 col-md-offset-3">
+<div class="row">
     {% if data.country_code %}
-    <h3>{{city}}</h3>
-    <h3>country code: {{data.country_code}}</h3>
-    <h5>coordinate: {{data.coordinate}}</h5>
-    <h5>temperature: {{data.temp}}</h5>
-    <h5>Pressure: {{data.pressure}}</h5>
-    <h5>humidity: {{data.humidity}}</h5>
+<div class="card-body col-md-6 col-md-offset-3" id="showData">
+    <h2 class="showDataHeader">{{city}}</h2>
+    <h3 class="showDataHeader">country code: {{data.country_code}}</h3>
+    <h5 class="showDataHeader">coordinate: {{data.coordinate}}</h5>
+    <h5 class="showDataHeader">temperature: {{data.temp}}</h5>
+    <h5 class="showDataHeader">Pressure: {{data.pressure}}</h5>
+    <h5 class="showDataHeader">humidity: {{data.humidity}}</h5>
 </div>
 {% endif %}
-</div> -->
-
-<!-- make a small copy -->
-<div class="row" >
-    <div class="col-md-6 col-md-offset-3" id="showData">
-        <h3 class="">city</h3>
-        <h4>country code:  data.country_code</h4>
-        <h5 class="showDataHeader">coordinate:    data.coordinate</h5>
-        <h5 class="showDataHeader">temperature:   data.temp</h5>
-        <h5 class="showDataHeader">Pressure:      data.pressure</h5>
-        <h5 class="showDataHeader">humidity:      data.humidity</h5>
-    </div>
-
-    </div>
-
+</div>
 
 
 </body>
